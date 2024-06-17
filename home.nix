@@ -1,6 +1,23 @@
-{ config, pkgs, ... }:
+{ pkgs, config, catppuccin, ... }:
 
 {
+	catppuccin = {
+		flavor = "macchiato";
+		accent = "pink";
+	};
+
+  programs.kitty = {
+ 		enable = true;
+   	catppuccin.enable = true;
+		settings = {
+			confirm_os_window_close = 0;
+   		background_opacity = "0.8";
+   		cursor = "#cba6f7";
+   		cursor_blink_interval = 0;
+   		mouse_hide_wait = 0;
+   	};
+	};
+
   nixpkgs.config.allowUnfree = true;
 
   # Home Manager needs a bit of information about you and the paths it should
