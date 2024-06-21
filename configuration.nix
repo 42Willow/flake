@@ -10,6 +10,13 @@
 		accent = "pink";
 	};
 
+  console = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+    };
+  };
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -26,11 +33,6 @@
   # enable nix flakes!
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -44,7 +46,7 @@
   services.blueman.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Australia/Melbourne";
+  time.timeZone = "Australia/Sydney";
  
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";

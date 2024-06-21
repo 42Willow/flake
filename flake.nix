@@ -26,6 +26,7 @@
 							users.willow.imports = [
 								./home.nix
 								catppuccin.homeManagerModules.catppuccin
+								# inputs.schizofox.homeManagerModule
 							];
 						};
 					}

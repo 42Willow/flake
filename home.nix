@@ -1,22 +1,66 @@
-{ pkgs, config, catppuccin, ... }:
+{ pkgs, config, lib, catppuccin, ... }:
 
 {
 	catppuccin = {
 		flavor = "macchiato";
 		accent = "pink";
+    enable = true;
 	};
 
   programs.kitty = {
  		enable = true;
-   	catppuccin.enable = true;
 		settings = {
 			confirm_os_window_close = 0;
    		background_opacity = "0.8";
-   		cursor = "#cba6f7";
    		cursor_blink_interval = 0;
    		mouse_hide_wait = 0;
    	};
 	};
+
+  programs.bat = {
+    enable = true;
+  };
+
+  programs.tofi = {
+    enable = true;
+    settings = {
+      width = "100%";
+      height = "100%";
+      border-width = 0;
+      outline-width = 0;
+      padding-top = "30%";
+      padding-bottom = "30%";
+      padding-left = "8%";
+      padding-right = "8%";
+      result-spacing = 25;
+      num-results = 5;
+      font = "monospace";
+      clip-to-padding = true;
+      hide-cursor = true;
+    };
+  };
+
+  programs.btop = {
+    enable = true;
+  };
+
+  programs.bun = {
+    enable = true;
+  };
+
+  gtk = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "macchiato";
+      accent = "pink";
+      cursor = {
+        enable = true;
+        flavor = "macchiato";
+        accent = "dark";
+      };
+    };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -34,6 +78,14 @@
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
+  home.activation = {
+    # https://github.com/philj56/tofi/issues/115#issuecomment-1701748297
+    regenerateTofiCache = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      tofi_cache=${config.xdg.cacheHome}/tofi-drun
+      [[ -f "$tofi_cache" ]] && rm "$tofi_cache"
+    '';
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -48,7 +100,6 @@
     pkgs.polkit_gnome
     pkgs.firefox
     pkgs.keepassxc
-    pkgs.tofi
     pkgs.gnome.nautilus
     pkgs.gparted
     pkgs.blueman
@@ -62,12 +113,12 @@
     pkgs.aseprite
     # Work
     pkgs.obsidian
+    pkgs.activitywatch
     # CLI
     pkgs.tldr
     pkgs.fastfetch
     pkgs.spicetify-cli
-    # TUI
-    pkgs.btop
+    pkgs.just
     # Screen
     pkgs.grim
     pkgs.slurp
