@@ -92,14 +92,6 @@
     pulse.enable = true;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.willow = {
-    isNormalUser = true;
-    description = "42Willow";
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
-    packages = with pkgs; [ ];
-  };
-
   # home-manager = {
   #   extraSpecialArgs = { inherit inputs; };
   #   users = {
