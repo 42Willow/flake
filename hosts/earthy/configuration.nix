@@ -24,10 +24,17 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    systemd-boot = {
+      enable = true;
+      editor = false;
+      memtest86.enable = true;
+      netbootxyz.enable = true;
+    };
+    efi.canTouchEfiVariables = true;
+  };
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "earthy"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # enable nix flakes!
@@ -49,7 +56,7 @@
   time.timeZone = "Australia/Sydney";
  
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
+  i18n.defaultLocale = "en_AU.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_AU.UTF-8";
@@ -75,7 +82,10 @@
   # Enable sound with pipewire
   sound.enable = true;
   hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true; # optional but recommended
+  security = {
+    polkit.enable = true;
+    rtkit.enable = true; # optional but recommended
+  };
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -103,14 +113,28 @@
 
   programs.hyprland.enable = true;
 
+  # programs.nh = {
+  #   enable = true;
+  #   clean.enable = true;
+  #   clean.extraArgs = "--keep-since 4d --keep 3";
+  #   flake = "/etc/nixos";
+  # };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    curl
-    git
-  ];
+  environment = {
+    sessionVariables = {
+      FLAKE = "/etc/nixos";
+    };
+    
+    systemPackages = with pkgs; [
+      vim
+      wget
+      curl
+      git
+      nh
+      polkit_gnome
+    ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

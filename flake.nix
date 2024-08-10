@@ -8,14 +8,19 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+	schizofox = {
+      url = "github:schizofox/schizofox";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+#   inputs.spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, catppuccin, ... }: {
  		nixosConfigurations = {
- 			willow = nixpkgs.lib.nixosSystem {
+ 			earthy = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [
-					./configuration.nix
+        			./hosts/earthy/configuration.nix
 					catppuccin.nixosModules.catppuccin
 					home-manager.nixosModules.home-manager
 					{
@@ -26,7 +31,7 @@
 							users.willow.imports = [
 								./home.nix
 								catppuccin.homeManagerModules.catppuccin
-								# inputs.schizofox.homeManagerModule
+								inputs.schizofox.homeManagerModule
 							];
 						};
 					}

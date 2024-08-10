@@ -1,14 +1,8 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # hyprctl
 hyprctl setcursor Catppuccin-Macchiato-Dark-Cursors 24 &
 ~/.config/hypr/scripts/monitors.sh &
-
-# bar
-waybar &
-
-# update packages list
-pacman -Qe | awk '{print $1}' > $HOME/.dotfiles/assets/packages.txt &
 
 # clipboard
 wl-paste --type text --watch cliphist store & #Stores only text data
@@ -19,5 +13,5 @@ hyprpaper &
 hypridle &
 
 # other
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/nix/store/$(ls -la /nix/store | grep polkit-gnome | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-gnome-authentication-agent-1 &
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
