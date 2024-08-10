@@ -1,30 +1,35 @@
-{ pkgs, config, lib, catppuccin, inputs, username, host, ... }:
-
 {
+  pkgs,
+  config,
+  lib,
+  catppuccin,
+  inputs,
+  username,
+  host,
+  ...
+}: {
   imports =
-       [(import ./dotfiles)]
+    [(import ./dotfiles)]
     ++ [(import ./spicetify.nix)]
     ++ [(import ./packages.nix)];
-    
-	catppuccin = {
-		flavor = "macchiato";
-		accent = "pink";
-    enable = true;
-	};
 
-  programs.kitty = {
- 		enable = true;
-		settings = {
-			confirm_os_window_close = 0;
-   		background_opacity = "0.8";
-   		cursor_blink_interval = 0;
-   		mouse_hide_wait = 0;
-   	};
-	};
-
-  programs.bat = {
+  catppuccin = {
+    flavor = "macchiato";
+    accent = "pink";
     enable = true;
   };
+
+  programs.kitty = {
+    enable = true;
+    settings = {
+      confirm_os_window_close = 0;
+      background_opacity = "0.8";
+      cursor_blink_interval = 0;
+      mouse_hide_wait = 0;
+    };
+  };
+
+  programs.bat = {enable = true;};
 
   programs.tofi = {
     enable = true;
@@ -45,13 +50,9 @@
     };
   };
 
-  programs.btop = {
-    enable = true;
-  };
+  programs.btop = {enable = true;};
 
-  programs.bun = {
-    enable = true;
-  };
+  programs.bun = {enable = true;};
 
   gtk = {
     enable = true;
@@ -71,7 +72,7 @@
 
   home.activation = {
     # https://github.com/philj56/tofi/issues/115#issuecomment-1701748297
-    regenerateTofiCache = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    regenerateTofiCache = lib.hm.dag.entryAfter ["writeBoundary"] ''
       tofi_cache=${config.xdg.cacheHome}/tofi-drun
       [[ -f "$tofi_cache" ]] && rm "$tofi_cache"
     '';

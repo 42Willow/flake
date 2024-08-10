@@ -1,25 +1,26 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ pkgs, config, catppuccin, ... }:
-
 {
-  imports = [ # Include the results of the hardware scan.
+  pkgs,
+  config,
+  catppuccin,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./../../modules/core
   ];
 
-	catppuccin = {
-		flavor = "macchiato";
-		accent = "pink";
-	};
+  catppuccin = {
+    flavor = "macchiato";
+    accent = "pink";
+  };
 
   console = {
     enable = true;
-    catppuccin = {
-      enable = true;
-    };
+    catppuccin = {enable = true;};
   };
 
   # Bootloader.
@@ -37,7 +38,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # enable nix flakes!
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -53,7 +54,7 @@
 
   # Set your time zone.
   time.timeZone = "Australia/Sydney";
- 
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_AU.UTF-8";
 
@@ -113,10 +114,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment = {
-    sessionVariables = {
-      FLAKE = "/etc/nixos";
-    };
-    
+    sessionVariables = {FLAKE = "/etc/nixos";};
+
     systemPackages = with pkgs; [
       vim
       wget
@@ -153,5 +152,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

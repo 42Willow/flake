@@ -1,5 +1,4 @@
-{ inputs, ... }:
-{
+{inputs, ...}: {
   home.file = {
     ".config/hypr".source = ./hypr;
     # ".config/tofi".source = dotfiles/tofi;

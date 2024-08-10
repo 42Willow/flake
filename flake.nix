@@ -19,28 +19,35 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, ... } @ inputs:
-  let
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    catppuccin,
+    ...
+  } @ inputs: let
     username = "willow";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
-			inherit system;
-			config.allowUnfree = true;
+      inherit system;
+      config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
-  in
-  {
- 		nixosConfigurations = {
- 			earthy = nixpkgs.lib.nixosSystem {
-				inherit system;
-				modules = [
+  in {
+    nixosConfigurations = {
+      earthy = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
           (import ./hosts/earthy)
           catppuccin.nixosModules.catppuccin
           # if you use home-manager
           home-manager.nixosModules.home-manager
         ];
-        specialArgs = { host="earthy"; inherit self inputs username ; };
-			};
-		};
-	};
+        specialArgs = {
+          host = "earthy";
+          inherit self inputs username;
+        };
+      };
+    };
+  };
 }

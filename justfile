@@ -11,3 +11,6 @@ update:
 
 boot:
   sudo nixos-rebuild boot --flake /etc/nixos#earthy
+
+format:
+  alejandra *

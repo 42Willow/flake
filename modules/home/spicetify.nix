@@ -1,15 +1,15 @@
-{ pkgs, lib, inputs, ...}: 
-
-let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in 
 {
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+in {
   imports = [inputs.spicetify-nix.homeManagerModules.default];
 
   nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "spotify"
-    ];
+    builtins.elem (lib.getName pkg) ["spotify"];
 
   programs.spicetify = {
     enable = true;
@@ -18,10 +18,7 @@ in
       hidePodcasts
       shuffle
     ];
-    enabledCustomApps = with spicePkgs.apps; [
-      lyricsPlus
-      newReleases
-    ];
+    enabledCustomApps = with spicePkgs.apps; [lyricsPlus newReleases];
     enabledSnippets = with spicePkgs.snippets; [
       pointer
       smooth-progress-bar
