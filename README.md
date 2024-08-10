@@ -1,5 +1,8 @@
 # 42willow's nixdots
 
+> [!CAUTION]
+> I do not know what I am doing!
+
 These are my new dotfiles (migrating from arch over at https://github.com/42willow/dotfiles)
 
 > [!WARNING]
