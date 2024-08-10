@@ -27,6 +27,7 @@ in
       smooth-progress-bar
       remove-popular
       hide-download-button
+      remove-top-spacing
     ];
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "macchiato";
