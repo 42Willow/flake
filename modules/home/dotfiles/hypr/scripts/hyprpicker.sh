@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # run hyprpicker and then dunstify the output
 output=$(hyprpicker --autocopy)

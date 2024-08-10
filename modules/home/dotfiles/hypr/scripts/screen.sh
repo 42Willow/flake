@@ -1,6 +1,6 @@
 # Slightly modified version of https://github.com/quantum5/wayland-recorder/blob/master/record-screen
 
-#!/bin/bash
+#!/usr/bin/env bash
 
 if ! pgrep -x "wl-screenrec" > /dev/null; then # if wl-screenrec is running
     status_file="/tmp/screen_recording_status"
@@ -31,7 +31,7 @@ if ! pgrep -x "wl-screenrec" > /dev/null; then # if wl-screenrec is running
         rm "$status_file"
 
         nautilus_response=$(dunstify -t 0 -A yes,nautilus "  Screen recording saved" "Click to view in nautilus")
-        
+
         if [ "$nautilus_response" == "yes" ]; then
             nautilus "$filename"
         fi
