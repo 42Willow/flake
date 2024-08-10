@@ -8,34 +8,34 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-	schizofox = {
+    schizofox = {
       url = "github:schizofox/schizofox";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 #   inputs.spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, catppuccin, ... }: {
+  outputs = { self, nixpkgs, home-manager, catppuccin, ... } @ inputs:
+  let
+    username = "willow";
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+			inherit system;
+			config.allowUnfree = true;
+    };
+    lib = nixpkgs.lib;
+  in
+  {
  		nixosConfigurations = {
  			earthy = nixpkgs.lib.nixosSystem {
-				system = "x86_64-linux";
+				inherit system;
 				modules = [
-        			./hosts/earthy/configuration.nix
-					catppuccin.nixosModules.catppuccin
-					home-manager.nixosModules.home-manager
-					{
-						home-manager = {
-							useGlobalPkgs = true;
-							useUserPackages = true;
-							extraSpecialArgs = { inherit catppuccin; };
-							users.willow.imports = [
-								./home.nix
-								catppuccin.homeManagerModules.catppuccin
-								inputs.schizofox.homeManagerModule
-							];
-						};
-					}
-				];
+          (import ./hosts/earthy)
+          catppuccin.nixosModules.catppuccin
+          # if you use home-manager
+          home-manager.nixosModules.home-manager
+        ];
+        specialArgs = { host="earthy"; inherit self inputs username ; };
 			};
 		};
 	};

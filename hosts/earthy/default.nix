@@ -5,6 +5,11 @@
 { pkgs, config, catppuccin, ... }:
 
 {
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./../../modules/core
+  ];
+
 	catppuccin = {
 		flavor = "macchiato";
 		accent = "pink";
@@ -16,12 +21,6 @@
       enable = true;
     };
   };
-
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # inputs.home-manager.nixosModules.default
-    ];
 
   # Bootloader.
   boot.loader = {
@@ -133,6 +132,7 @@
       git
       nh
       polkit_gnome
+      home-manager
     ];
   };
 
