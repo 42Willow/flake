@@ -13,7 +13,7 @@
     # Core
     firefox
     keepassxc
-    gnome.nautilus
+    nautilus
     gparted
     blueman
     # Programming
