@@ -19,7 +19,7 @@
     # Programming
     kitty
     vscode
-    # Fun
+    # Procrastination
     prismlauncher
     vesktop
     aseprite
@@ -30,7 +30,10 @@
     tldr
     fastfetch
     just
+    # Nix Formatter
     alejandra
+    statix
+    deadnix
     # Screen
     grim
     slurp

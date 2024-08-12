@@ -12,5 +12,11 @@ update:
 boot:
   sudo nixos-rebuild boot --flake /etc/nixos#earthy
 
-format:
-  alejandra *
+[group('lint')]
+alejandra:
+  alejandra .
+statix:
+  statix check .
+deadnix:
+  deadnix -eq .
+

@@ -15,11 +15,22 @@
 
 ## `nix-shell` isolated build/dev/run environments
 
+Nix Reference Manual: [nix.dev](https://nix.dev/manual/nix/2.18/command-ref/new-cli/nix3-shell)
+
 | command                   | result                                                                        |
 | :------------------------ | :---------------------------------------------------------------------------- |
 | `nix-shell -p <packages>` | start shell in env with `<packages>`                                          |
 | `nix-shell`               | start shell in the env defined by `shell.nix` or `default.nix` in current dir |
 | `nix-shell --pure`        | same, but outside env is inaccessible                                         |
+
+## `nix run` run a nix application
+
+Nix Reference Manual: [nix.dev](https://nix.dev/manual/nix/2.18/command-ref/new-cli/nix3-run)
+
+Examples:
+nix run nixpkgs#vim
+nix run nixpkgs#statix -- help
+nix run github:astro/deadnix -- -eq .
 
 ## NixOS declarative operating system configuration management
 
@@ -31,3 +42,28 @@
 | `nixos-option <option>`             | show option value and documentation                                   | also try [search.nixos.org/options](https://search.nixos.org/options) |
 
 \*services can fail to start
+
+## Useful linting commands
+
+### Alejandra
+
+[GitHub](https://github.com/kamadorueda/alejandra)
+
+### Deadnix
+
+[GitHub](https://github.com/astro/deadnix)
+
+#### Check
+
+```bash
+nix run github:astro/deadnix -- .
+```
+
+#### Format
+
+Remember to commit/stage to git first, as this command will change files.
+
+```bash
+nix run github:astro/deadnix -- -eq .
+```
+
