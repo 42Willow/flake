@@ -17,6 +17,11 @@
     flavor = "macchiato";
     accent = "pink";
     enable = true;
+    pointerCursor = {
+      enable = true;
+      flavor = "macchiato";
+      accent = "dark";
+    };
   };
 
   programs.kitty = {
@@ -53,20 +58,6 @@
   programs.btop = {enable = true;};
 
   programs.bun = {enable = true;};
-
-  gtk = {
-    enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "macchiato";
-      accent = "pink";
-      cursor = {
-        enable = true;
-        flavor = "macchiato";
-        accent = "dark";
-      };
-    };
-  };
 
   nixpkgs.config.allowUnfree = true;
 

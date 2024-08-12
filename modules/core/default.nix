@@ -6,6 +6,6 @@
   host,
   ...
 }: {
-  imports = [(import ./user.nix)];
-  # ++ [ (import ./user.nix) ]
+  imports = [(import ./user.nix)]
+  ++ [(import ./pipewire.nix)];
 }

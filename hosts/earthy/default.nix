@@ -79,18 +79,9 @@
   # Enable CUPS to print documents
   services.printing.enable = true;
 
-  # Enable sound with pipewire
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
   security = {
     polkit.enable = true;
     rtkit.enable = true; # optional but recommended
-  };
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
   };
 
   # home-manager = {
