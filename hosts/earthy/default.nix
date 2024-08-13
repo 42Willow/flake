@@ -4,7 +4,6 @@
 {
   pkgs,
   config,
-  catppuccin,
   ...
 }: {
   imports = [
