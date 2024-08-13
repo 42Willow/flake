@@ -13,16 +13,6 @@
     ./../../modules/core
   ];
 
-  catppuccin = {
-    flavor = "macchiato";
-    accent = "pink";
-  };
-
-  console = {
-    enable = true;
-    catppuccin = {enable = true;};
-  };
-
   # Bootloader.
   boot.loader = {
     systemd-boot = {
