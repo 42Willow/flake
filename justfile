@@ -15,8 +15,15 @@ boot:
 [group('lint')]
 alejandra:
   alejandra .
+
+[group('lint')]
 statix:
   statix check .
+
+[group('lint')]
 deadnix:
   deadnix -eq .
 
+[group('lint')]
+deadnix-scan:
+  deadnix .
