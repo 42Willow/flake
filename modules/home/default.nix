@@ -4,12 +4,13 @@
   catppuccin,
   ...
 }: {
-  imports =
-    [(import ./dotfiles)]
-    ++ [(import ./spicetify.nix)]
-    ++ [(import ./nushell.nix)]
-    ++ [(import ./ags.nix)]
-    ++ [(import ./packages.nix)];
+  imports = [
+    ./dotfiles
+    ./spicetify.nix
+    ./nushell.nix
+    ./ags.nix
+    ./packages.nix
+  ];
 
   catppuccin = {
     flavor = "macchiato";

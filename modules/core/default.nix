@@ -1,6 +1,7 @@
 {...}: {
-  imports =
-    [(import ./user.nix)]
-    ++ [(import ./catppuccin.nix)]
-    ++ [(import ./pipewire.nix)];
+  imports = [
+    ./user.nix
+    ./catppuccin.nix
+    ./pipewire.nix
+  ];
 }
