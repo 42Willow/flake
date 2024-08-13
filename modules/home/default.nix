@@ -7,6 +7,7 @@
   imports =
     [(import ./dotfiles)]
     ++ [(import ./spicetify.nix)]
+    ++ [(import ./nushell.nix)]
     ++ [(import ./packages.nix)];
 
   catppuccin = {

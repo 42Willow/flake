@@ -1,6 +1,7 @@
 {
   inputs,
   username,
+  pkgs,
   ...
 }: {
   imports = [inputs.home-manager.nixosModules.home-manager];
@@ -21,6 +22,7 @@
     isNormalUser = true;
     description = "${username}";
     extraGroups = ["networkmanager" "wheel" "dialout"];
+    shell = pkgs.nushell;
   };
   nix.settings.allowed-users = ["${username}"];
 }
