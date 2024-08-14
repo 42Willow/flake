@@ -16,4 +16,7 @@
       accountsservice
     ];
   };
+  home.packages = with pkgs; [
+    inputs.hyprpanel.packages."x86_64-linux".default
+  ];
 }

@@ -222,13 +222,13 @@
       "locked": {
         "lastModified": 1723527997,
         "narHash": "sha256-u8k/iFoe6MzYEDnP10l6KA5nViH5dLpSi1WtofxMe30=",
-        "owner": "Jas-SinghFSU",
+        "owner": "42willow",
         "repo": "HyprPanel",
         "rev": "ea2ebc5c4b64ba4eeb6dfe773d5e1482ebdf587a",
         "type": "github"
       },
       "original": {
-        "owner": "Jas-SinghFSU",
+        "owner": "42willow",
         "repo": "HyprPanel",
         "type": "github"
       }

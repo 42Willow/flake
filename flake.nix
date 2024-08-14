@@ -4,7 +4,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
     ags.url = "github:Aylur/ags";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    hyprpanel.url = "github:42willow/HyprPanel";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,12 +29,6 @@
     username = "willow";
     system = "x86_64-linux";
     lib = nixpkgs.lib;
-    pkgs = import nixpkgs {
-      inherit system;
-      overlays = [
-        inputs.hyprpanel.overlay.${system}
-      ];
-    };
   in {
     nixosConfigurations = {
       earthy = nixpkgs.lib.nixosSystem {
