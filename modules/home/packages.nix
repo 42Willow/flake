@@ -26,6 +26,7 @@
     tldr
     fastfetch
     just
+    killall
     # Nix Formatter
     alejandra
     statix
