@@ -36,5 +36,6 @@
     wl-clipboard
     ddcutil
     brightnessctl
+    hyprpanel
   ];
 }
