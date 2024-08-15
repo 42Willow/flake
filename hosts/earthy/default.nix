@@ -17,18 +17,6 @@
     fsType = "btrfs";
   };
 
-  # Bootloader.
-  boot.loader = {
-    systemd-boot = {
-      enable = true;
-      editor = false;
-      memtest86.enable = true;
-      netbootxyz.enable = true;
-    };
-    efi.canTouchEfiVariables = true;
-  };
-
-
   # enable nix flakes!
   nix.settings.experimental-features = ["nix-command" "flakes"];
 

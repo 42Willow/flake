@@ -6,5 +6,6 @@
     ./pipewire.nix
     ./fonts.nix
     ./network.nix
+    ./bootloader.nix
   ];
 }
