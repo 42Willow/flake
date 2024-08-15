@@ -3,6 +3,8 @@
   config,
   ...
 }: {
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+
   time.timeZone = "Australia/Sydney";
 
   i18n.defaultLocale = "en_AU.UTF-8";

@@ -9,5 +9,6 @@
     ./bootloader.nix
     ./security.nix
     ./bluetooth.nix
+    ./programs.nix
   ];
 }

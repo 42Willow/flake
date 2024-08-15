@@ -16,10 +16,6 @@
     device = "/dev/disk/by-uuid/17a0b73e-30de-424f-9f3c-44294696695a";
     fsType = "btrfs";
   };
-
-  # enable nix flakes!
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -28,13 +24,4 @@
 
   # Enable CUPS to print documents
   services.printing.enable = true;
-
-  programs.hyprland.enable = true;
-
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/etc/nixos";
-  };
 }
