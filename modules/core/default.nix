@@ -10,5 +10,6 @@
     ./security.nix
     ./bluetooth.nix
     ./programs.nix
+    ./services.nix
   ];
 }
