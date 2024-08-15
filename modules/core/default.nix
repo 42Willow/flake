@@ -8,5 +8,6 @@
     ./network.nix
     ./bootloader.nix
     ./security.nix
+    ./bluetooth.nix
   ];
 }
