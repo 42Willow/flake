@@ -7,5 +7,6 @@
     ./fonts.nix
     ./network.nix
     ./bootloader.nix
+    ./security.nix
   ];
 }

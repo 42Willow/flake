@@ -35,11 +35,6 @@
   # Enable CUPS to print documents
   services.printing.enable = true;
 
-  security = {
-    polkit.enable = true;
-    rtkit.enable = true; # optional but recommended
-  };
-
   programs.hyprland.enable = true;
 
   programs.nh = {
