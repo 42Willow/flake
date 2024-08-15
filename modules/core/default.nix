@@ -5,5 +5,6 @@
     ./catppuccin.nix
     ./pipewire.nix
     ./fonts.nix
+    ./network.nix
   ];
 }
