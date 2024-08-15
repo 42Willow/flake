@@ -11,6 +11,7 @@
     keepassxc
     nautilus
     gparted
+    polkit_gnome
     blueman
     # Programming
     kitty
