@@ -90,23 +90,21 @@
 
   programs.hyprland.enable = true;
 
-  # programs.nh = {
-  #   enable = true;
-  #   clean.enable = true;
-  #   clean.extraArgs = "--keep-since 4d --keep 3";
-  #   flake = "/etc/nixos";
-  # };
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/etc/nixos";
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment = {
-    sessionVariables = {FLAKE = "/etc/nixos";};
-
     systemPackages = with pkgs; [
       vim
       wget
       curl
       git
-      nh
       polkit_gnome
       home-manager
     ];
