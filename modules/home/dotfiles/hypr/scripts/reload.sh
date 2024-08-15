@@ -2,7 +2,6 @@
 
 processes=(
   "hyprpaper"
-  "hyprpanel"
 )
 
 # See https://docs.gtk.org/Pango/pango_markup.html for possible formatting

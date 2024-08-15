@@ -12,8 +12,6 @@ hyprpaper &
 
 hypridle &
 
-hyprpanel &
-
 # other
 /nix/store/$(ls -la /nix/store | grep polkit-gnome | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-gnome-authentication-agent-1 &
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
