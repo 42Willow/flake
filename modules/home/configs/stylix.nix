@@ -10,6 +10,11 @@
 
     targets = {
       gtk.enable = true;
+      firefox.enable = true;
+    };
+
+    override = {
+      base0D = "f5bde6";
     };
 
     # https://tinted-theming.github.io/base16-gallery/
