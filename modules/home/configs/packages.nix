@@ -37,5 +37,10 @@
     wl-clipboard
     ddcutil
     brightnessctl
+    # Build tools
+    nodejs
+    nodePackages.npm
+    nodePackages.pnpm
+    cargo
   ];
 }
