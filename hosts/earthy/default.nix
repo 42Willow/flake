@@ -1,7 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-{...}: {
+{pkgs, ...}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -12,4 +9,10 @@
     device = "/dev/disk/by-uuid/17a0b73e-30de-424f-9f3c-44294696695a";
     fsType = "btrfs";
   };
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [ intel-media-driver vaapiIntel ];
+  };
+
 }
