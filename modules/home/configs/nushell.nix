@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   programs.nushell = {
     enable = true;
     extraConfig = ''
@@ -17,6 +17,11 @@
           algorithm: "fuzzy"
         }
       }
+    '';
+    # $env.PATH = ($env.PATH | split row (char esep)
+    #   | append "/some/path")
+    extraEnv = ''
+      $env.FLAKE = "${config.home.homeDirectory}/flake"
     '';
   };
 }

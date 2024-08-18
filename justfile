@@ -1,16 +1,14 @@
 switch:
-  sudo nixos-rebuild switch --flake /etc/nixos#earthy
+  nh os switch
 
 clean:
-  sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations old
-  nix-collect-garbage -d
-  nix store optimise
+  nh clean all
 
 update:
-  sudo nixos-rebuild switch --upgrade --flake /etc/nixos#earthy
+  nh os switch -u
 
 boot:
-  sudo nixos-rebuild boot --flake /etc/nixos#earthy
+  nh os boot
 
 [group('lint')]
 alejandra:
