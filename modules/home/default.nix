@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./configs # per application configuration
     ./dotfiles # un-nixified dotfiles

@@ -1,26 +1,23 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   fonts = {
     fontconfig = {
       enable = true;
-      defaultFonts =
-        let
-          fnts = [
-            "MonaspiceNe Nerd Font"
-          ];
-        in
-        {
-          monospace = fnts;
-          sansSerif = fnts;
-          serif = fnts;
-          emoji = [
-            "Twitter Color Emoji"
-            "Noto Color Emoji"
-          ];
-        };
+      defaultFonts = let
+        fnts = [
+          "MonaspiceNe Nerd Font"
+        ];
+      in {
+        monospace = fnts;
+        sansSerif = fnts;
+        serif = fnts;
+        emoji = [
+          "Twitter Color Emoji"
+          "Noto Color Emoji"
+        ];
+      };
     };
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "Monaspace" ]; })
+      (nerdfonts.override {fonts = ["Monaspace"];})
       corefonts
       noto-fonts
 

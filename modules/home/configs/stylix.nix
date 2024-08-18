@@ -1,5 +1,9 @@
-{ pkgs, inputs, ... }: {
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [inputs.stylix.homeManagerModules.stylix];
   stylix = {
     enable = true;
     autoEnable = false;
@@ -9,7 +13,8 @@
     };
 
     # https://tinted-theming.github.io/base16-gallery/
-    base16Scheme = let theme = "catppuccin-macchiato";
+    base16Scheme = let
+      theme = "catppuccin-macchiato";
     in "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
 
     cursor = {
