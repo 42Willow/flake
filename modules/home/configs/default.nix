@@ -9,17 +9,14 @@
     ./nushell.nix
     ./ags.nix
     ./packages.nix
+    ./gtk.nix
+    ./stylix.nix
   ];
 
   catppuccin = {
     flavor = "macchiato";
     accent = "pink";
     enable = true;
-    pointerCursor = {
-      enable = true;
-      flavor = "macchiato";
-      accent = "dark";
-    };
   };
 
   programs.kitty = {
