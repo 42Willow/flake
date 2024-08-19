@@ -24,4 +24,5 @@
       $env.FLAKE = "${config.home.homeDirectory}/flake"
     '';
   };
+  # TODO starship
 }
