@@ -27,6 +27,9 @@
     fastfetch
     just
     killall
+    playerctl
+    # GUI
+    speedcrunch # calculator
     # Nix Formatter
     alejandra
     statix
