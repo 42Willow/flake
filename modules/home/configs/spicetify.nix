@@ -21,10 +21,10 @@ in {
     enabledCustomApps = with spicePkgs.apps; [lyricsPlus newReleases];
     enabledSnippets = with spicePkgs.snippets; [
       pointer
-      smooth-progress-bar
-      remove-popular
-      hide-download-button
-      remove-top-spacing
+      smoothProgressBar
+      removePopular
+      hideDownloadButton
+      removeTopSpacing
     ];
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "macchiato";
