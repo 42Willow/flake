@@ -11,6 +11,7 @@
     ./packages.nix
     ./gtk.nix
     ./stylix.nix
+    ./git.nix
   ];
 
   catppuccin = {
