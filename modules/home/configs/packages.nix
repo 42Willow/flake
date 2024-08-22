@@ -28,8 +28,11 @@
     just
     killall
     playerctl
+    devenv
+    mdbook
     # GUI
     speedcrunch # calculator
+    eog # eye of gnome
     # Nix Formatter
     alejandra
     statix
