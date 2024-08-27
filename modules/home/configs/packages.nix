@@ -31,6 +31,7 @@
     # GUI
     speedcrunch # calculator
     eog # eye of gnome
+    libreoffice
     # Nix Formatter
     alejandra
     statix
