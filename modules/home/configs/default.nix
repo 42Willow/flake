@@ -12,6 +12,8 @@
     ./gtk.nix
     ./stylix.nix
     ./git.nix
+    ./services.nix
+    ./xdg.nix
   ];
 
   catppuccin = {

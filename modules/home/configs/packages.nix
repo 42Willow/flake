@@ -28,8 +28,6 @@
     just
     killall
     playerctl
-    devenv
-    mdbook
     # GUI
     speedcrunch # calculator
     eog # eye of gnome
@@ -47,6 +45,8 @@
     nodejs
     nodePackages.npm
     nodePackages.pnpm
-    cargo
+    devenv
+    mdbook
+    rustup
   ];
 }

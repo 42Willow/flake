@@ -24,5 +24,8 @@
     extraGroups = ["networkmanager" "wheel" "dialout"];
     shell = pkgs.nushell;
   };
-  nix.settings.allowed-users = ["${username}"];
+  nix.settings = {
+    allowed-users = ["${username}"];
+    trusted-users = ["root" "${username}"];
+  };
 }
