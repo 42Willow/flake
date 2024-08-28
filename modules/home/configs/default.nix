@@ -16,6 +16,7 @@
     ./xdg.nix
     ./chromium.nix
     ./nvim
+    ./waybar
   ];
 
   catppuccin = {

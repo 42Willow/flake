@@ -5,12 +5,13 @@ hyprctl setcursor Catppuccin-Macchiato-Dark-Cursors 24 &
 ~/.config/hypr/scripts/monitors.sh &
 
 # clipboard
-wl-paste --type text --watch cliphist store & #Stores only text data
+wl-paste --type text --watch cliphist store & # Stores only text data
 
-# wallpaper
 hyprpaper &
 
 hypridle &
+
+waybar &
 
 # other
 /nix/store/$(ls -la /nix/store | grep polkit-gnome | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-gnome-authentication-agent-1 &
