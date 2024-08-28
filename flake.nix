@@ -28,9 +28,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # firefox user.js
-    arkenfox = {
-      url = "github:dwarfmaster/arkenfox-nixos";
+    # neovim
+    nixvim = {
+      url = "github:nix-community/nixvim/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

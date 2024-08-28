@@ -15,6 +15,7 @@
     ./services.nix
     ./xdg.nix
     ./chromium.nix
+    ./nvim
   ];
 
   catppuccin = {
