@@ -14,6 +14,7 @@
     ./git.nix
     ./services.nix
     ./xdg.nix
+    ./chromium.nix
   ];
 
   catppuccin = {
