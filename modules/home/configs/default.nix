@@ -12,7 +12,6 @@
     ./gui.nix
     ./stylix.nix
     ./git.nix
-    ./services.nix
     ./xdg.nix
     ./chromium.nix
     ./nvim
