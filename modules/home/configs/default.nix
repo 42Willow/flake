@@ -9,7 +9,7 @@
     ./nushell.nix
     ./ags.nix
     ./packages.nix
-    ./gtk.nix
+    ./gui.nix
     ./stylix.nix
     ./git.nix
     ./services.nix
