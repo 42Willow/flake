@@ -7,7 +7,6 @@
   imports = [
     ./spicetify.nix
     ./nushell.nix
-    ./ags.nix
     ./packages.nix
     ./gui.nix
     ./stylix.nix
