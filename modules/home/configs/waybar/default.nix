@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   programs.waybar = {
     enable = true;
     style = builtins.readFile ./style.css;
@@ -92,8 +92,8 @@
         battery = {
           format = "{capacity}% {icon}";
           format-icons = {
-            charging = [ "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
-            default = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+            charging = ["󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅"];
+            default = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
           };
           format-full = "Charged ";
           interval = 5;

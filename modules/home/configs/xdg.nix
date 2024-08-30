@@ -1,5 +1,4 @@
-{config, ...}:
-{
+{config, ...}: {
   xdg.userDirs = {
     enable = true;
     documents = "${config.home.homeDirectory}/docs";

@@ -1,5 +1,4 @@
-{...}:
-{
+{...}: {
   # imports = [
   #   ./copilot.nix
   # ];
@@ -20,7 +19,6 @@
         };
       };
       copilot-vim.enable = true;
-
     };
   };
 }
