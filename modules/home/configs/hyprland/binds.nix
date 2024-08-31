@@ -1,7 +1,6 @@
 {...}: {
   wayland.windowManager.hyprland.settings = {
-    # ~ Keybinds ~
-    #   See https://wiki.hyprland.org/Configuring/Binds/
+    # See https://wiki.hyprland.org/Configuring/Binds/
 
     # l -> locked, will also work when an input inhibitor (e.g. a lockscreen) is active.
     # r -> release, will trigger on release of a key.
@@ -70,7 +69,6 @@
         "$mod, B, exec, hyprctl dispatch dpms off"
         "$mod, P, exec, hyprctl dispatch pin"
 
-
         # ~ Windows ~
 
         "$mod, C, killactive"
@@ -87,7 +85,6 @@
         "$altMod, up, movewindow, u"
         "$altMod, down, movewindow, d"
 
-
         # ~ Workspaces ~
 
         "$mod, mouse_up, workspace, e-1"
@@ -97,7 +94,6 @@
         "$mod, A, togglespecialworkspace, spotify"
         "$altMod, A, movetoworkspace, special:spotify"
         "$mod, escape, togglespecialworkspace, btop"
-
 
         # ~ Sudo mods ~
 
