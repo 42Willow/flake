@@ -74,6 +74,7 @@
         "$mod, C, killactive"
         "$mod, S, togglefloating"
         "$mod, Z, alterzorder, bottom"
+        "$mod, D, layoutmsg, togglesplit"
         "$mod, F11, fullscreenstate, -1 2" # fake fullscreen
 
         "$mod, left, movefocus, l"
