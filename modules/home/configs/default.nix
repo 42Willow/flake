@@ -16,6 +16,7 @@
     ./nvim
     ./waybar
     ./hyprland
+    ./firefox
   ];
 
   catppuccin = {

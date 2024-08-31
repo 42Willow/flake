@@ -7,7 +7,6 @@
     hyprpicker
     hyprcursor
     # Core
-    firefox
     keepassxc
     nautilus
     gparted

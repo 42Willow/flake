@@ -183,6 +183,22 @@
         "type": "github"
       }
     },
+    "firefox-cascade": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707704545,
+        "narHash": "sha256-GMXSpNaShNu/Bce6TTnlgzGHV8MhHRVICv8hJqMi70w=",
+        "owner": "cascadefox",
+        "repo": "cascade",
+        "rev": "8fbe98934fa58f934f7ed5253367396519b320a4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cascadefox",
+        "repo": "cascade",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "locked": {
         "lastModified": 1696426674,
@@ -734,6 +750,7 @@
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
+        "firefox-cascade": "firefox-cascade",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",

@@ -38,6 +38,12 @@
       url = "github:hyprwm/Hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    # firefox
+    firefox-cascade = {
+      url = "github:cascadefox/cascade";
+      flake = false;
+    };
   };
 
   outputs = {
