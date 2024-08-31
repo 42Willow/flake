@@ -1,6 +1,6 @@
 {...}: {
   home.file = {
-    ".config/hypr".source = ./hypr;
+    # ".config/hypr".source = ./hypr;
     # ".config/tofi".source = dotfiles/tofi;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

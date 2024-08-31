@@ -15,6 +15,7 @@
     ./chromium.nix
     ./nvim
     ./waybar
+    ./hyprland.nix
   ];
 
   catppuccin = {
