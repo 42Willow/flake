@@ -3,7 +3,6 @@
     xdg-desktop-portal-hyprland
     hyprlock
     hypridle
-    hyprpaper
     hyprpicker
     hyprcursor
     # Core

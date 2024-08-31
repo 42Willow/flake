@@ -5,6 +5,7 @@
     ./settings.nix
     ./env.nix
     ./autostart.nix
+    ./hyprpaper.nix
   ];
 
   wayland.windowManager.hyprland = {

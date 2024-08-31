@@ -44,6 +44,12 @@
       url = "github:cascadefox/cascade";
       flake = false;
     };
+
+    # wallpapers
+    wallpapers = {
+      url = "github:42willow/wallpapers";
+      flake = false;
+    };
   };
 
   outputs = {

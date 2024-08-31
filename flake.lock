@@ -757,7 +757,8 @@
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "spicetify-nix": "spicetify-nix",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "wallpapers": "wallpapers"
       }
     },
     "spicetify-nix": {
@@ -876,6 +877,22 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1706344336,
+        "narHash": "sha256-FQLg0dQtO0WoxjJm5UEOi5l7jlDRvXVV8Tf1GmtUIOY=",
+        "owner": "42willow",
+        "repo": "wallpapers",
+        "rev": "cd080d4feb980d50d4319a6b34159191d19e1d4b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "42willow",
+        "repo": "wallpapers",
         "type": "github"
       }
     },
