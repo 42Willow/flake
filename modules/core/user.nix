@@ -25,6 +25,7 @@
     shell = pkgs.nushell;
   };
   nix.settings = {
+    warn-dirty = false;
     allowed-users = ["${username}"];
     trusted-users = ["root" "${username}"];
     substituters = ["https://hyprland.cachix.org"];
