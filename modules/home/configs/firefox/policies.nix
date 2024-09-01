@@ -2,7 +2,7 @@
   programs.firefox.policies = {
     AppAutoUpdate = false;
     BackgroundAppUpdate = false;
-    DisableAccounts = true;
+    # DisableAccounts = true;
     DisableFirefoxStudies = true;
     DisableProfileImport = true;
     DisableProfileRefresh = true;
@@ -21,7 +21,7 @@
     EncryptedMediaExtensions.Enabled = true;
     ExtensionUpdate = false;
     NoDefaultBookmarks = true;
-    PasswordManagerEnabled = false;
+    # PasswordManagerEnabled = false;
     UserMessaging = {
       ExtensionRecommendations = false;
       FeatureRecommendations = false;

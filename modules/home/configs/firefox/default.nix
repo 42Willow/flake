@@ -8,7 +8,7 @@
 
   programs.firefox = {
     enable = true;
-    profiles.nix = {
+    profiles.default = {
       settings = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };

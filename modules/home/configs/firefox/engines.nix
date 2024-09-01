@@ -9,7 +9,7 @@
   # Home Manager   | @homemanager @hm
   # MyNixOS        | @mynixos @mn
 
-  programs.firefox.profiles.nix.search = {
+  programs.firefox.profiles.default.search = {
     force = true;
     default = "DuckDuckGo";
     engines = {
