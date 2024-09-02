@@ -32,6 +32,9 @@ Thank you to the following people for helping me get into nix (from [catppuccin]
 
 - Vimjoyer: [YouTube](https://www.youtube.com/@vimjoyer/videos)
 - Awesome Nix: [GitHub](https://github.com/nix-community/awesome-nix)
+- Nix Pills: [EPUB](https://nixos.org/guides/nix-pills/nix-pills.epub) | [Web](https://nixos.org/guides/nix-pills/) | [GitHub](https://github.com/NixOS/nix-pills)
+- nix.dev: [Web](https://nix.dev/) | [GitHub](https://github.com/NixOS/nix.dev)
+- NixOS & Flakes Book: [PDF](https://github.com/ryan4yin/nixos-and-flakes-book/releases/latest) | [Github](https://github.com/ryan4yin/nixos-and-flakes-book)
 
 ... and more [here](https://github.com/stars/42Willow/lists/nix)
 
