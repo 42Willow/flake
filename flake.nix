@@ -41,7 +41,7 @@
 
     # firefox
     firefox-cascade = {
-      url = "github:cascadefox/cascade";
+      url = "github:42willow/cascade";
       flake = false;
     };
 

@@ -186,15 +186,15 @@
     "firefox-cascade": {
       "flake": false,
       "locked": {
-        "lastModified": 1707704545,
-        "narHash": "sha256-GMXSpNaShNu/Bce6TTnlgzGHV8MhHRVICv8hJqMi70w=",
-        "owner": "cascadefox",
+        "lastModified": 1725178115,
+        "narHash": "sha256-6QVNTv68GpgeGysv9s2h6bkPceDERQ9of1JYlWbJ99c=",
+        "owner": "42willow",
         "repo": "cascade",
-        "rev": "8fbe98934fa58f934f7ed5253367396519b320a4",
+        "rev": "abe1e7c32b52410d8313b11bdc561a375fdacfef",
         "type": "github"
       },
       "original": {
-        "owner": "cascadefox",
+        "owner": "42willow",
         "repo": "cascade",
         "type": "github"
       }
