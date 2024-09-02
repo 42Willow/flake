@@ -26,6 +26,7 @@
     just
     killall
     playerctl
+    pandoc
     # GUI
     speedcrunch # calculator
     eog # eye of gnome
