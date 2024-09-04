@@ -4,7 +4,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # theme management
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin.url = "github:42willow/catppuccin-nix";
+    # catppuccin.url = "path:/home/willow/git/sw/catppuccin-nix";
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";

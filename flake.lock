@@ -151,14 +151,14 @@
       "locked": {
         "lastModified": 1724469296,
         "narHash": "sha256-p3R4LUNk6gC+fTKRUm9ByXaoRIocnQMwVuJSIxECQ8o=",
-        "owner": "catppuccin",
-        "repo": "nix",
+        "owner": "42willow",
+        "repo": "catppuccin-nix",
         "rev": "874e668ddaf3687e8d38ccd0188a641ffefe1cfb",
         "type": "github"
       },
       "original": {
-        "owner": "catppuccin",
-        "repo": "nix",
+        "owner": "42willow",
+        "repo": "catppuccin-nix",
         "type": "github"
       }
     },
