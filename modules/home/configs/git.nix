@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.git = {
     enable = true;
 
@@ -18,5 +18,9 @@
       aa = "add";
       aliases = "config --get-regexp '^alias\\.'";
     };
+  };
+  programs.gh = {
+    enable = true;
+    extensions = [ pkgs.gh-eco ];
   };
 }
