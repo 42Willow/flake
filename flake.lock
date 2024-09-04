@@ -149,11 +149,11 @@
     },
     "catppuccin": {
       "locked": {
-        "lastModified": 1724469296,
-        "narHash": "sha256-p3R4LUNk6gC+fTKRUm9ByXaoRIocnQMwVuJSIxECQ8o=",
+        "lastModified": 1725450119,
+        "narHash": "sha256-FZn2OML2j1eoL2yb29+C28NbI48M/sstF9tDaRiOL/w=",
         "owner": "42willow",
         "repo": "catppuccin-nix",
-        "rev": "874e668ddaf3687e8d38ccd0188a641ffefe1cfb",
+        "rev": "959f4bd3a050082ea34aaf0678d6e6cee86dcb87",
         "type": "github"
       },
       "original": {
