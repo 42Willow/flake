@@ -19,8 +19,5 @@
       aliases = "config --get-regexp '^alias\\.'";
     };
   };
-  programs.gh = {
-    enable = true;
-    extensions = [ pkgs.gh-eco ];
-  };
+  programs.gh.enable = true;
 }
