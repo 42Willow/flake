@@ -27,6 +27,8 @@
     killall
     playerctl
     pandoc
+    # TUI
+    peaclock
     # GUI
     speedcrunch # calculator
     eog # eye of gnome
