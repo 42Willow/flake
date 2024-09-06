@@ -10,6 +10,8 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin-catwalk.url = "github:catppuccin/catwalk";
+    catppuccin-whiskers.url = "github:catppuccin/whiskers";
 
     # home-manager
     home-manager = {

@@ -1,6 +1,8 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    xdg-desktop-portal-hyprland
+{pkgs, inputs, ...}: {
+  home.packages = with inputs; [
+    catppuccin-whiskers.packages.${pkgs.system}.whiskers
+    catppuccin-catwalk.packages.${pkgs.system}.catwalk
+  ] ++ (with pkgs; [
     hyprlock
     hypridle
     hyprpicker
@@ -50,5 +52,5 @@
     devenv
     mdbook
     rustup
-  ];
+  ]);
 }
