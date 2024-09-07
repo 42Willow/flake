@@ -8,6 +8,13 @@ These are my new dotfiles (migrating from arch over at https://github.com/42will
 > [!WARNING]
 > You should _not_ look at this for inspiration until it's complete.
 
+## Hosts
+
+Hostnames are listed in this [gist](hhttps://gist.github.com/42Willow/bd33bd408deced515cd05fd7512b2597).
+
+- `earthy`: ThinkPad X1 Yoga Gen 4
+- `anemone`: Raspberry Pi 4
+
 ## Installation
 
 1. Clone the repository
