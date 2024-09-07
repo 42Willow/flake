@@ -12,6 +12,7 @@
     nautilus
     gparted
     polkit_gnome
+    networkmanagerapplet
     # Programming
     kitty
     vscode
