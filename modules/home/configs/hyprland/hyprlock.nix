@@ -1,5 +1,4 @@
-{inputs, ...}:
-{
+{inputs, ...}: {
   programs.hyprlock = {
     enable = true;
     settings = {
