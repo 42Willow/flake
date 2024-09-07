@@ -8,6 +8,11 @@ These are my new dotfiles (migrating from arch over at https://github.com/42will
 > [!WARNING]
 > You should _not_ look at this for inspiration until it's complete.
 
+## Installation
+
+1. Clone the repository
+   `nix run nixpkgs#git clone https://github.com/42willow/flakes.git --extra-experimental-features "nix-command flakes"`
+
 ## Credits
 
 ### People
