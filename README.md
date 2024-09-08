@@ -19,6 +19,8 @@ Hostnames are listed in this [gist](hhttps://gist.github.com/42Willow/bd33bd408d
 
 1. Clone the repository
    `nix run nixpkgs#git clone https://github.com/42willow/flakes.git --extra-experimental-features "nix-command flakes"`
+2. Install the flake
+   `sudo nixos-rebuild switch --flake ./flake#<hostname>`
 
 ## Credits
 

@@ -1,5 +1,6 @@
 switch:
   nh os switch
+  # sudo nixos-rebuild switch --flake /etc/nixos#earthy
 
 clean:
   nh clean all

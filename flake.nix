@@ -63,20 +63,30 @@
     ...
   } @ inputs: let
     username = "willow";
-    system = "x86_64-linux";
     lib = nixpkgs.lib;
   in {
     nixosConfigurations = {
       earthy = nixpkgs.lib.nixosSystem {
-        inherit system;
+        system = "x86_64-linux";
         modules = [
           (import ./hosts/earthy)
           catppuccin.nixosModules.catppuccin
-          # if you use home-manager
           home-manager.nixosModules.home-manager
         ];
         specialArgs = {
           host = "earthy";
+          inherit self inputs username;
+        };
+      };
+      anemone = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [
+          (import ./hosts/anemone)
+          catppuccin.nixosModules.catppuccin
+          home-manager.nixosModules.home-manager
+        ];
+        specialArgs = {
+          host = "anemone";
           inherit self inputs username;
         };
       };
