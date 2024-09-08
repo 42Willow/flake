@@ -90,6 +90,18 @@
           inherit self inputs username;
         };
       };
+      lily = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          (import ./hosts/lily)
+          catppuccin.nixosModules.catppuccin
+          home-manager.nixosModules.home-manager
+        ];
+        specialArgs = {
+          host = "lily";
+          inherit self inputs username;
+        };
+      };
     };
   };
 }
