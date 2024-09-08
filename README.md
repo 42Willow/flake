@@ -11,7 +11,10 @@ These are my new dotfiles (migrating from arch over at https://github.com/42will
 ## Installation
 
 1. Clone the repository
-   `nix run nixpkgs#git clone https://github.com/42willow/flakes.git --extra-experimental-features "nix-command flakes"`
+
+   ```bash
+   nix run nixpkgs#git clone https://github.com/42willow/flakes.git --extra-experimental-features "nix-command flakes"
+   ```
 
 ## Credits
 
