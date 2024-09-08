@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   imports = [
     ./user.nix
     ./system.nix
@@ -12,4 +12,6 @@
     ./programs.nix
     ./services.nix
   ];
+
+  bootloader.enable = lib.mkDefault true;
 }
