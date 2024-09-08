@@ -1,13 +1,5 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{...}: {
   programs = {
-    hyprland = {
-      enable = true;
-      package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    };
     nh = {
       enable = true;
       clean.enable = true;

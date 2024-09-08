@@ -6,10 +6,8 @@
     ./pipewire.nix
     ./fonts.nix
     ./network.nix
-    ./bootloader.nix
-    ./security.nix
-    ./bluetooth.nix
     ./programs.nix
     ./services.nix
+    ./hyprland.nix
   ];
 }

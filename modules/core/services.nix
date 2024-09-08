@@ -1,7 +1,9 @@
 {...}: {
   services = {
-    gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
+    dbus.enable = true; # D-Bus message bus
+    fstrim.enable = true; # SSD TRIM
+    gvfs.enable = true; # GNOME Virtual File System
 
     # Printing
     printing.enable = true;
@@ -11,8 +13,6 @@
       openFirewall = true;
     };
 
-    # dbus.enable = true;
-    # fstrim.enable = true;
     xserver.xkb = {
       layout = "us";
       variant = "";

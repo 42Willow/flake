@@ -17,6 +17,22 @@
     ];
   };
 
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+  services.blueman.enable = true;
+
+  boot.loader = {
+    systemd-boot = {
+      enable = true;
+      editor = false;
+      memtest86.enable = true;
+      netbootxyz.enable = true;
+    };
+    efi.canTouchEfiVariables = true;
+  };
+
   services.tlp = {
     enable = true;
     settings = {
