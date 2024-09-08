@@ -13,7 +13,7 @@
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
       userChrome = ''
-        @import '${inputs.firefox-cascade}/chrome/includes/cascade-config.css';
+        @import '${inputs.firefox-cascade}/chrome/includes/cascade-config-mouse.css';
         @import '${inputs.firefox-cascade}/integrations/catppuccin/cascade-macchiato.css';
 
         @import '${inputs.firefox-cascade}/chrome/includes/cascade-layout.css';
