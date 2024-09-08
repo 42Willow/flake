@@ -34,13 +34,13 @@
         dots_size = 0.2;
         dots_spacing = 0.2;
         dots_center = true;
-        outer_color = "$pink";
+        outer_color = "$accent";
         inner_color = "$surface0";
         font_color = "$text";
         fade_on_empty = false;
-        placeholder_text = "󰌾 Password...";
+        placeholder_text = "<span foreground=\"##$textAlpha\">󰌾 Password...</span>";
         hide_input = false;
-        check_color = "$pink";
+        check_color = "$accent";
         fail_color = "$red";
         position = "0, -35";
         halign = "center";
