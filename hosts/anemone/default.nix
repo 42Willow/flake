@@ -1,8 +1,8 @@
 {pkgs, ...}: {
-  imports = [
-    ./../../modules/core
-  ];
-  bootloader.enable = false;
+  # imports = [
+  #   ./../../modules/core
+  # ];
+  # bootloader.enable = false;
   boot = {
     kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
     initrd.availableKernelModules = ["xhci_pci" "usbhid" "usb_storage"];
