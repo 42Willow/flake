@@ -10,7 +10,7 @@ These are my new dotfiles (migrating from arch over at https://github.com/42will
 
 ## Hosts
 
-Hostnames are listed in this [gist](hhttps://gist.github.com/42Willow/bd33bd408deced515cd05fd7512b2597).
+Hostnames are listed in this [gist](https://gist.github.com/42Willow/bd33bd408deced515cd05fd7512b2597).
 
 - `earthy`: ThinkPad X1 Yoga Gen 4
 - `anemone`: Raspberry Pi 4
