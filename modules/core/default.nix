@@ -10,6 +10,4 @@
     ./services.nix
     ./hyprland.nix
   ];
-
-  bootloader.enable = lib.mkDefault true;
 }
