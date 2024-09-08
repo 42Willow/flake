@@ -14,6 +14,7 @@ Hostnames are listed in this [gist](https://gist.github.com/42Willow/bd33bd408de
 
 - `earthy`: ThinkPad X1 Yoga Gen 4
 - `anemone`: Raspberry Pi 4
+- `lily`: Portable Recovery ISO
 
 ## Installation
 
