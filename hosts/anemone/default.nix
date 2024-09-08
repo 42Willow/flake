@@ -1,7 +1,7 @@
 {pkgs, ...}: {
-  # imports = [
-  #   ./../../modules/core
-  # ];
+  imports = [
+    ./../../modules/core/user.nix
+  ];
   # bootloader.enable = false;
   boot = {
     kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
