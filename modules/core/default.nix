@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   imports = [
     ./user.nix
     ./system.nix
@@ -10,4 +10,6 @@
     ./services.nix
     ./hyprland.nix
   ];
+
+  bootloader.enable = lib.mkDefault true;
 }
