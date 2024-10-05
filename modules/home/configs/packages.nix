@@ -41,6 +41,7 @@
       speedcrunch # calculator
       eog # eye of gnome
       libreoffice
+      calibre # ebooks
       # Nix Formatter
       alejandra
       statix
@@ -58,5 +59,7 @@
       devenv
       mdbook
       rustup
+      gcc # needed for rust-analyzer
+      direnv
     ]);
 }
