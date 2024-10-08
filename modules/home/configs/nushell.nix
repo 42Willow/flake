@@ -16,6 +16,14 @@
           partial: true
           algorithm: "fuzzy"
         }
+        hooks: {
+          pre_prompt: [{ ||
+            if (which direnv | is-empty) {
+              return
+            }
+            direnv export json | from json | default {} | load-env
+          }]
+        }
       }
     '';
     # $env.PATH = ($env.PATH | split row (char esep)
