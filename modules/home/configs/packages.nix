@@ -58,7 +58,8 @@
       nodePackages.pnpm
       devenv
       mdbook
-      rustup
+      cargo
+      rustc
       gcc # needed for rust-analyzer
       direnv
     ]);
