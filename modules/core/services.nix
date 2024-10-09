@@ -14,8 +14,9 @@
     };
 
     xserver.xkb = {
-      layout = "us";
-      variant = "";
+      layout = "us,us";
+      variant = "colemak,";
+      options = "grp:alt_space_toggle, caps:backspace, shift:both_capslock_cancel";
     };
   };
 }

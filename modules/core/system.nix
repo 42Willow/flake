@@ -36,5 +36,7 @@
     rtkit.enable = true; # optional but recommended
   };
 
+  console.useXkbConfig = true; # Use XKB configuration for TTYs
+
   system.stateVersion = "24.05";
 }

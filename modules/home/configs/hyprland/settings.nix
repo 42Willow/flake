@@ -17,7 +17,7 @@
 
     input = {
       kb_layout = "us,us";
-      kb_variant = ",colemak";
+      kb_variant = "colemak,";
       kb_options = "grp:alt_space_toggle, caps:backspace, shift:both_capslock_cancel";
       follow_mouse = 1;
       touchpad = {
