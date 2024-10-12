@@ -8,6 +8,8 @@
     ./spicetify.nix
     ./nushell.nix
     ./packages.nix
+    ./thunderbird.nix
+    ./gammastep.nix
     ./gui.nix
     ./stylix.nix
     ./git.nix
