@@ -33,6 +33,8 @@
     efi.canTouchEfiVariables = true;
   };
 
+  hardware.i2c.enable = true; # needed for ddcutil
+
   services.tlp = {
     enable = true;
     settings = {
