@@ -13,11 +13,6 @@
       hypridle
       hyprpicker
       hyprcursor
-      # Core
-      keepassxc
-      nautilus
-      gparted
-      polkit_gnome
       # Programming
       kitty
       vscode
@@ -27,7 +22,7 @@
       aseprite
       # Work
       obsidian
-      activitywatch
+      logseq
       # CLI
       tldr
       fastfetch
@@ -39,7 +34,11 @@
       peaclock
       # GUI
       speedcrunch # calculator
-      eog # eye of gnome
+      keepassxc
+      gparted
+      polkit_gnome
+      gnome.eog # eye of gnome
+      gnome.nautilus
       libreoffice
       calibre # ebooks
       # Nix Formatter

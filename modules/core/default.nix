@@ -9,5 +9,6 @@
     ./programs.nix
     ./services.nix
     ./hyprland.nix
+    ./restic.nix
   ];
 }

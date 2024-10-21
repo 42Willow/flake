@@ -4,12 +4,16 @@
     ./../../modules/core
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11"
+  ];
+
   fileSystems."/run/media/arch" = {
     device = "/dev/disk/by-uuid/17a0b73e-30de-424f-9f3c-44294696695a";
     fsType = "btrfs";
   };
 
-  hardware.graphics = {
+  hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver

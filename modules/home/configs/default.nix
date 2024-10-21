@@ -15,7 +15,7 @@
     ./git.nix
     ./xdg.nix
     ./chromium.nix
-    ./nvim
+    # ./nvim
     ./waybar
     ./hyprland
     ./firefox
