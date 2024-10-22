@@ -1,4 +1,4 @@
-{lib, ...}: {
+{...}: {
   imports = [
     ./user.nix
     ./system.nix
