@@ -31,13 +31,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprland-plugins = {
-      url = "github:hyprwm/Hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     # firefox
     firefox-cascade = {
       url = "github:42willow/cascade";
@@ -65,7 +58,7 @@
       earthy = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          (import ./hosts/earthy)
+          ./hosts/earthy
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
         ];
@@ -77,7 +70,7 @@
       anemone = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [
-          (import ./hosts/anemone)
+          ./hosts/anemone
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
         ];
@@ -89,7 +82,7 @@
       lily = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          (import ./hosts/lily)
+          ./hosts/lily
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
         ];
