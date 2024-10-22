@@ -41,6 +41,7 @@
       gnome.nautilus
       libreoffice
       calibre # ebooks
+      localsend # local network file sharing
       # Nix Formatter
       alejandra
       statix
