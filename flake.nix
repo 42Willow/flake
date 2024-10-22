@@ -32,11 +32,7 @@
     };
 
     # hyprland
-    hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
-      submodules = true;
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/Hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
