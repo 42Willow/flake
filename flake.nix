@@ -15,7 +15,7 @@
 
     # home-manager
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -26,10 +26,10 @@
     };
 
     # neovim
-    nixvim = {
-      url = "github:nix-community/nixvim/";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim/";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # firefox
     firefox-cascade = {
