@@ -5,6 +5,7 @@
     fstrim.enable = true; # SSD TRIM
     gvfs.enable = true; # GNOME Virtual File System
 
+    # TODO: Make printing actually work, originally attempted in november 2024
     # Printing
     printing.enable = true;
     avahi = {
