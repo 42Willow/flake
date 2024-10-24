@@ -29,7 +29,6 @@
       just
       killall
       playerctl
-      pandoc
       # TUI
       peaclock
       # GUI
