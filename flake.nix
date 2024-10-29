@@ -10,8 +10,14 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin-catwalk.url = "github:catppuccin/catwalk";
-    catppuccin-whiskers.url = "github:catppuccin/whiskers";
+    catppuccin-catwalk = {
+      url = "github:catppuccin/catwalk";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    catppuccin-whiskers = {
+      url = "github:catppuccin/whiskers";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # home-manager
     home-manager = {
@@ -32,10 +38,14 @@
     # };
 
     # firefox
-    firefox-cascade = {
-      url = "github:42willow/cascade";
-      flake = false;
+    textfox = {
+      url = "github:adriankarlen/textfox";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+    # firefox-cascade = {
+    #   url = "github:42willow/cascade";
+    #   flake = false;
+    # };
 
     # wallpapers
     wallpapers = {
