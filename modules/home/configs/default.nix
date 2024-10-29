@@ -19,6 +19,7 @@
     ./waybar
     ./hyprland
     ./firefox
+    ./mpd.nix
   ];
 
   catppuccin = {

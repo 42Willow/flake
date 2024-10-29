@@ -12,7 +12,7 @@
     workspace = [
       "special:scratchpad, on-created-empty:kitty, gapsout:50"
       "special:btop, on-created-empty:kitty btop, gapsout:50"
-      "special:spotify, on-created-empty:spotify, gapsout:50"
+      "special:mpd, on-created-empty:kitty ncmpcpp, gapsout:50"
     ];
   };
 }
