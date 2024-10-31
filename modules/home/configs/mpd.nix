@@ -88,4 +88,23 @@
       };
     };
   };
+  programs.beets = {
+    enable = true;
+    # package = pkgs.beetsPackages.beets-minimal;
+    settings = {
+      plugins = [ "permissions" "fetchart" "mpdupdate" ];
+      directory = "${config.xdg.userDirs.music}";
+      library = "${config.home.homeDirectory}/media/music_library.db";
+      import = {
+        copy = true;
+        write = true;
+        autotag = true;
+      };
+      paths = {
+        default = "%upper{%left{$albumartist,1}}/$albumartist/$album%aunique{}/$track. $title";
+        singleton = "Singles/$artist/$title";
+        comp = "Compilations/$album%aunique{}/$track. $title";
+      };
+    };
+  };
 }
