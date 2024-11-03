@@ -20,6 +20,7 @@
     ./hyprland
     ./firefox
     ./mpd.nix
+    ./cura.nix
   ];
 
   catppuccin = {
