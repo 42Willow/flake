@@ -92,7 +92,7 @@
     enable = true;
     # package = pkgs.beetsPackages.beets-minimal;
     settings = {
-      plugins = [ "permissions" "fetchart" "mpdupdate" ];
+      plugins = [ "fetchart" "thumbnails" "mpdupdate" "mpdstats" "web" ];
       directory = "${config.xdg.userDirs.music}";
       library = "${config.home.homeDirectory}/media/music_library.db";
       import = {
