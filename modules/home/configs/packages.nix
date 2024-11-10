@@ -54,7 +54,7 @@
       # Build tools
       nodejs
       nodePackages.npm
-      nodePackages.pnpm
+      pnpm
       devenv
       mdbook
       cargo
