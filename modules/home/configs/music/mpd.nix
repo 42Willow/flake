@@ -29,4 +29,10 @@
       };
     };
   };
+
+  # Bridge between MPD and MPRIS
+  services.mpdris2 = {
+    enable = true;
+    notifications = true;
+  };
 }
