@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = [
     (
       let
@@ -12,20 +11,20 @@
           };
         };
       in
-      pkgs.writeScriptBin "cura" ''
-        #! ${pkgs.bash}/bin/bash
-        # AppImage version of Cura loses current working directory and treats all paths relateive to $HOME.
-        # So we convert each of the files passed as argument to an absolute path.
-        # This fixes use cases like `cd /path/to/my/files; cura mymodel.stl anothermodel.stl`.
-        args=()
-        for a in "$@"; do
-          if [ -e "$a" ]; then
-            a="$(realpath "$a")"
-          fi
-          args+=("$a")
-        done
-        QT_QPA_PLATFORM=xcb exec "${cura5}/bin/cura5" "''${args[@]}"
-      ''
+        pkgs.writeScriptBin "cura" ''
+          #! ${pkgs.bash}/bin/bash
+          # AppImage version of Cura loses current working directory and treats all paths relateive to $HOME.
+          # So we convert each of the files passed as argument to an absolute path.
+          # This fixes use cases like `cd /path/to/my/files; cura mymodel.stl anothermodel.stl`.
+          args=()
+          for a in "$@"; do
+            if [ -e "$a" ]; then
+              a="$(realpath "$a")"
+            fi
+            args+=("$a")
+          done
+          QT_QPA_PLATFORM=xcb exec "${cura5}/bin/cura5" "''${args[@]}"
+        ''
     )
   ];
 }
