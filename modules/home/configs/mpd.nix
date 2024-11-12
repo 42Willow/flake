@@ -61,7 +61,7 @@
       # layout
       user_interface = "alternative";
       startup_screen = "playlist";
-      startup_slave_screen = "visualizer";
+      startup_slave_screen = "media_library";
       song_columns_list_format = "(10)[blue]{l} (45)[magenta]{t} (15)[white]{a} (30)[white]{b}";
 
       # display modes
@@ -75,6 +75,9 @@
 
       # navigation
       lines_scrolled = 1; # default is 5
+
+      # show album artist instead of artist by default
+      media_library_primary_tag = "album_artist";
     };
   };
   services.mpd-discord-rpc = {
@@ -88,11 +91,31 @@
       };
     };
   };
+  systemd.user.services.mpdstats = {
+    Unit = {
+      Description = "Beets MPDStats daemon";
+      Requires = [ "mpd.service" ];
+      After = [ "mpd.service" ];
+    };
+
+    Install.WantedBy = [ "default.target" ];
+
+    Service = {
+      ExecStart = "${config.programs.beets.package}/bin/beet mpdstats";
+      Restart = "on-failure";
+    };
+  };
   programs.beets = {
     enable = true;
     # package = pkgs.beetsPackages.beets-minimal;
     settings = {
-      plugins = [ "fetchart" "thumbnails" "mpdupdate" "mpdstats" "web" ];
+      plugins = [
+        "fetchart"
+        "thumbnails"
+        "mpdupdate"
+        "mpdstats"
+        "ftintitle"
+      ];
       directory = "${config.xdg.userDirs.music}";
       library = "${config.home.homeDirectory}/media/music_library.db";
       import = {
@@ -101,9 +124,19 @@
         autotag = true;
       };
       paths = {
-        default = "%upper{%left{$albumartist,1}}/$albumartist/$album%aunique{}/$track. $title";
+        default = "Albums/%upper{%left{$albumartist,1}}/$albumartist/$album%aunique{}/$track. $title";
         singleton = "Singles/$artist/$title";
         comp = "Compilations/$album%aunique{}/$track. $title";
+      };
+      fetchart = {
+        auto = true;
+        sources = [
+          "filesystem"
+          "amazon"
+          "itunes"
+          "coverart"
+          "albumart"
+        ];
       };
     };
   };
