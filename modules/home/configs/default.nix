@@ -19,7 +19,7 @@
     ./waybar
     ./hyprland
     ./firefox
-    ./mpd.nix
+    ./music
     ./cura.nix
   ];
 
