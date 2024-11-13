@@ -21,7 +21,7 @@
         "thumbnails"
         "mpdupdate"
         "mpdstats"
-        "ftintitle"
+        "mbsync"
       ];
       directory = "${config.xdg.userDirs.music}";
       library = "${config.home.homeDirectory}/media/music_library.db";
