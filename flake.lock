@@ -374,11 +374,11 @@
         "tinted-tmux": "tinted-tmux"
       },
       "locked": {
-        "lastModified": 1731090365,
-        "narHash": "sha256-ti3gXhgVpIUL/7w6zDJuH+hOnyTZqxrIX/yYqALmiEI=",
+        "lastModified": 1731577695,
+        "narHash": "sha256-ohxX2gG7zDWIA3slEbiSyAVSiO98clCoL+CmiEiYwVU=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "6863412636c8f2cb3b7360f747fbd020fbfddf68",
+        "rev": "e0a278871b63b1800ccdda568861b5324dd93797",
         "type": "github"
       },
       "original": {
@@ -425,11 +425,11 @@
         "nur": "nur"
       },
       "locked": {
-        "lastModified": 1730749708,
-        "narHash": "sha256-fbmyoDHB8Hxe3GG+y/Nf5QFaSmxDvi4ebrhBQ6jCzRQ=",
+        "lastModified": 1731575842,
+        "narHash": "sha256-eKVCGMBtzG866IKz/HXtpuug6IRo+jI1EXYpGxjTDKs=",
         "owner": "adriankarlen",
         "repo": "textfox",
-        "rev": "6b3bd4a743c41daeec39bd9d0f96224018169658",
+        "rev": "9a3b37962600961179a0876c36ebc0e40bb4b897",
         "type": "github"
       },
       "original": {
