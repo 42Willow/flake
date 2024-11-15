@@ -8,7 +8,7 @@
       };
       background = {
         color = "rgba(25, 20, 20, 1.0)";
-        path = "${inputs.wallpapers}/Catppuccin/Macchiato/Kurzgesagt-Unknown_Lifeform.png";
+        path = "${inputs.wallpapers}/dist/Macchiato/Kurzgesagt-Unknown_Lifeform.png";
       };
       label = [
         {

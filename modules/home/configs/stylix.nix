@@ -28,6 +28,6 @@
       size = 24;
     };
 
-    image = "~/.wallpapers/Catppuccin/Macchiato/Kurzgesagt-On_A_Moon.png";
+    image = "${inputs.wallpapers}/dist/Macchiato/Kurzgesagt-On_A_Moon.png";
   };
 }
