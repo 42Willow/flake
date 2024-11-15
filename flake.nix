@@ -2,6 +2,7 @@
   description = "NixOS configuration of 42Willow";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # theme management
     catppuccin.url = "github:42willow/catppuccin-nix";

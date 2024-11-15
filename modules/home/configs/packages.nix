@@ -9,7 +9,6 @@
       catppuccin-catwalk.packages.${pkgs.system}.catwalk
     ]
     ++ (with pkgs; [
-      hyprlock
       hypridle
       hyprpicker
       hyprcursor
