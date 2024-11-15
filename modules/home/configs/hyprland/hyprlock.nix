@@ -7,7 +7,6 @@
   nixpkgs-unstable,
   ...
 }: let
-
   scripts = {
     song-art = pkgs.writeShellScriptBin "song-art" ''
       #!/usr/bin/env bash
