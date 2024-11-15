@@ -17,6 +17,23 @@
         echo $file_dir
       fi
     '';
+    song-info = pkgs.writeShellScriptBin "song-info" ''
+      #!/usr/bin/env bash
+
+      artist=$(playerctl metadata --format '{{artist}}')
+      title=$(playerctl metadata --format '{{title}}')
+
+      if [[ $(playerctl status) == "Playing" ]]; then
+        case "$1" in
+        --title)
+          echo $title
+          ;;
+        --artist)
+          echo $artist
+          ;;
+        esac
+      fi
+    '';
   };
 in {
   programs.hyprlock = {
@@ -56,7 +73,7 @@ in {
           valign = "center";
         }
         {
-          text = "cmd[update:1000] echo \"$(playerctl metadata --format '{{title}}')\"";
+          text = "cmd[update:1000] echo \"$(${scripts.song-info}/bin/song-info --title)\"";
           color = "$text";
           font_size = 17;
           position = "0, -270";
@@ -64,7 +81,7 @@ in {
           valign = "center";
         }
         {
-          text = "cmd[update:1000] echo \"$(playerctl metadata --format '{{artist}}')\"";
+          text = "cmd[update:1000] echo \"$(${scripts.song-info}/bin/song-info --artist)\"";
           color = "$text";
           font_size = 15;
           position = "0, -300";
