@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-    ./spicetify.nix
     ./nushell.nix
     ./packages.nix
     ./thunderbird.nix
