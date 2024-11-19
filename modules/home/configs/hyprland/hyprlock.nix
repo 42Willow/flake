@@ -4,7 +4,6 @@
 {
   inputs,
   pkgs,
-  nixpkgs-unstable,
   ...
 }: let
   scripts = {
