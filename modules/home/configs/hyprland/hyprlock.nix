@@ -37,7 +37,7 @@
 in {
   programs.hyprlock = {
     enable = true;
-    package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.hyprlock;
+    # package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.hyprlock;
     # See https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock
     settings = {
       general = {

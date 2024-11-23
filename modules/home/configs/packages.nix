@@ -5,9 +5,13 @@
 }: {
   home.packages = with inputs;
     [
-      catppuccin-whiskers.packages.${pkgs.system}.whiskers
+      # TODO: whiskers
+      # catppuccin-whiskers.packages.${pkgs.system}.whiskers
       catppuccin-catwalk.packages.${pkgs.system}.catwalk
     ]
+    ++ (with inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}; [
+      calibre # ebooks
+    ])
     ++ (with pkgs; [
       hypridle
       hyprpicker
@@ -35,10 +39,9 @@
       keepassxc
       gparted
       polkit_gnome
-      gnome.eog # eye of gnome
-      gnome.nautilus
+      eog # eye of gnome
+      nautilus
       libreoffice
-      calibre # ebooks
       localsend # local network file sharing
       # Nix Formatter
       alejandra
