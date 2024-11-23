@@ -39,10 +39,14 @@
     # };
 
     # firefox
-    textfox = {
-      url = "github:adriankarlen/textfox";
+    zen-browser = {
+      url = "github:fufexan/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # textfox = {
+    #   url = "github:adriankarlen/textfox";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # firefox-cascade = {
     #   url = "github:42willow/cascade";
     #   flake = false;

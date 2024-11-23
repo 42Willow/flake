@@ -8,6 +8,7 @@
       # TODO: whiskers
       # catppuccin-whiskers.packages.${pkgs.system}.whiskers
       catppuccin-catwalk.packages.${pkgs.system}.catwalk
+      inputs.zen-browser.packages."${pkgs.system}".specific
     ]
     ++ (with inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}; [
       calibre # ebooks

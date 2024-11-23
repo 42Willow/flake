@@ -63,7 +63,7 @@
         ", Print, exec, grim -g \"$(slurp -d -c f5bde6)\" - | wl-copy"
         "$mod, space, exec, tofi-drun --drun-launch=true --fuzzy-match=true --font /usr/share/fonts/OTF/MonaspiceNeNerdFont-Regular.otf"
         "$mod, Q, exec, kitty"
-        "$mod, F, exec, firefox"
+        "$mod, F, exec, zen"
         "$mod, E, exec, nautilus"
         "$mod, L, exec, hyprlock"
         "$mod, B, exec, hyprctl dispatch dpms off"

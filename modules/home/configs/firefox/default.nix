@@ -4,13 +4,13 @@
   imports = [
     ./engines.nix
     ./policies.nix
-    inputs.textfox.homeManagerModules.default
+    # inputs.textfox.homeManagerModules.default
   ];
 
-  textfox = {
-    enable = true;
-    profile = "default";
-  };
+  # textfox = {
+  #   enable = true;
+  #   profile = "default";
+  # };
 
   programs.firefox = {
     enable = true;
