@@ -10,5 +10,6 @@
     ./services.nix
     ./hyprland.nix
     ./restic.nix
+    ./printing.nix
   ];
 }
