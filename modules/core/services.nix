@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{...}: {
   services = {
     gnome.gnome-keyring.enable = true;
     dbus.enable = true; # D-Bus message bus

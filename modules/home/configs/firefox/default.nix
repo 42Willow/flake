@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{...}: {
   # Inspired by https://github.com/SystematicError/dotfiles/blob/master/users/systematic/modules/firefox.nix
 
   imports = [

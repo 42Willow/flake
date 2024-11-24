@@ -1,11 +1,15 @@
-{pkgs, lib, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   services.printing = {
     enable = true;
     # allowFrom = [ "all" ];
     # browsing = true;
     # defaultShared = true;
     openFirewall = true;
-    drivers = [ pkgs.gutenprint ];
+    drivers = [pkgs.gutenprint];
   };
 
   services.avahi = {
