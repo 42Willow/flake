@@ -4,5 +4,6 @@
     ./beets.nix
     ./ncmpcpp.nix
     ./spicetify.nix
+    ./spotdl.nix
   ];
 }
