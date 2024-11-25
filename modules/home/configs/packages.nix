@@ -44,6 +44,7 @@
       nautilus
       libreoffice
       localsend # local network file sharing
+      vlc
       # Nix Formatter
       alejandra
       statix
