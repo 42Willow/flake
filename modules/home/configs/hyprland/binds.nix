@@ -1,5 +1,8 @@
 {...}: {
   wayland.windowManager.hyprland.settings = {
+    binds = {
+      scroll_event_delay = 0; # default: 300
+    };
     # See https://wiki.hyprland.org/Configuring/Binds/
 
     # l -> locked, will also work when an input inhibitor (e.g. a lockscreen) is active.
@@ -35,22 +38,24 @@
     # Always-on bindings
     bindl = [
       ", xf86display, exec, hyprctl dispatch dpms off"
-      ", xf86wlan, exec, nmcli radio wifi toggle"
-      # ", xf86tools, exec, /home/willow/.dotfiles/tofi/power_menu.sh" # TODO
-      ", xf86bluetooth, exec, bluetoothctl power toggle"
-      # ", xf86keyboard, exec, hyprctl keyword input:kb_variant colemak" # TODO: choose another bind
-      ", xf86favorites, exec, hyprctl dispatch pin"
       ", xf86audioplay, exec, playerctl play-pause"
       ", xf86audiopause, exec, playerctl play-pause"
       ", xf86audionext, exec, playerctl next"
       ", xf86audioprev, exec, playerctl previous"
-      ", xf86audiomicmute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-      ", xf86calculator, exec, speedcrunch"
+
+      "$mod, B, exec, hyprctl dispatch dpms off"
     ];
 
     # Normal bindings
     bind =
       [
+        ", xf86wlan, exec, nmcli radio wifi toggle"
+        # ", xf86tools, exec, /home/willow/.dotfiles/tofi/power_menu.sh" # TODO
+        ", xf86bluetooth, exec, bluetoothctl power toggle"
+        # ", xf86keyboard, exec, hyprctl keyword input:kb_variant colemak" # TODO: choose another bind
+        ", xf86favorites, exec, hyprctl dispatch pin"
+        ", xf86audiomicmute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        ", xf86calculator, exec, speedcrunch"
         # ~ Executables ~
         # TODO
         # "$mod, Print, exec, ~/.config/hypr/scripts/screen.sh"
@@ -66,7 +71,6 @@
         "$mod, F, exec, zen"
         "$mod, E, exec, nautilus"
         "$mod, L, exec, hyprlock"
-        "$mod, B, exec, hyprctl dispatch dpms off"
         "$mod, P, exec, hyprctl dispatch pin"
 
         # ~ Windows ~
@@ -101,6 +105,7 @@
         # "$sudoMod, R, exec, ~/.config/hypr/scripts/reload.sh" TODO
         # "$sudoMod, P, exec, ~/.config/tofi/scripts/power_menu.sh" # TODO
         "$sudoMod, M, exit"
+        "$sudoMod, S, exec, kitty --hold nh os switch"
       ]
       ++ (
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
