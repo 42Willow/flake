@@ -26,10 +26,10 @@
         }
       }
     '';
-    # $env.PATH = ($env.PATH | split row (char esep)
-    #   | append "/some/path")
     extraEnv = ''
       $env.FLAKE = "${config.home.homeDirectory}/flake"
+      $env.PATH = ($env.PATH | split row (char esep)
+        | append "~/.cargo/bin")
     '';
   };
   # TODO starship
