@@ -36,5 +36,4 @@
         | append "~/.cargo/bin")
     '';
   };
-  # TODO starship
 }

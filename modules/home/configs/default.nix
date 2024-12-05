@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    ./nushell.nix
+    ./shell
     ./packages.nix
     ./thunderbird.nix
     ./gammastep.nix
