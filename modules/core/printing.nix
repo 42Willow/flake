@@ -9,7 +9,8 @@
     # browsing = true;
     # defaultShared = true;
     openFirewall = true;
-    drivers = [pkgs.gutenprint];
+    # use the command `
+    drivers = [pkgs.gutenprint pkgs.mfcl8690cdwcupswrapper];
   };
 
   services.avahi = {
@@ -30,7 +31,17 @@
         model = "gutenprint.${lib.versions.majorMinor (lib.getVersion pkgs.gutenprint)}://brother-hl-5340d/expert";
         ppdOptions = {
           PageSize = "A4";
-          # pdftops-renderer = "gs";
+        };
+      }
+      {
+        # http://localhost:631/printers/Brother-MFC-L8690CDW
+        name = "Brother-MFC-L8690CDW";
+        location = "Home";
+        description = "Brother MFC-L8690CDW";
+        deviceUri = "lpd://192.168.1.45/binary_p1";
+        model = "brother_mfcl8690cdw_printer_en.ppd";
+        ppdOptions = {
+          PageSize = "A4";
         };
       }
     ];
