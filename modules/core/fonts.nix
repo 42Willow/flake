@@ -2,14 +2,11 @@
   fonts = {
     fontconfig = {
       enable = true;
-      defaultFonts = let
-        fnts = [
-          "MonaspiceNe Nerd Font"
-        ];
-      in {
-        monospace = fnts;
-        sansSerif = fnts;
-        serif = fnts;
+      # use fc-list to list all available fonts
+      defaultFonts = {
+        monospace = ["MonaspiceNe Nerd Font"];
+        sansSerif = ["Lexend Deca"];
+        serif = ["Lexend Deca"];
         emoji = [
           "Twitter Color Emoji"
           "Noto Color Emoji"
@@ -20,6 +17,7 @@
       (nerdfonts.override {fonts = ["Monaspace"];})
       corefonts
       noto-fonts
+      lexend
 
       # fonts for none latin languages
       noto-fonts-cjk-sans
