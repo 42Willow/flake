@@ -17,7 +17,6 @@
       programs.home-manager.enable = true;
     };
   };
-
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
