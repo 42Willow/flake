@@ -1,4 +1,4 @@
-{config, ...}: {
+{inputs, pkgs, config, ...}: {
   services.mpd = {
     enable = true;
     musicDirectory = "${config.xdg.userDirs.music}";
@@ -20,7 +20,7 @@
 
   services.mpd-discord-rpc = {
     enable = true;
-    # package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.mpd-discord-rpc;
+    package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.mpd-discord-rpc;
     settings = {
       format = {
         details = "$title";
