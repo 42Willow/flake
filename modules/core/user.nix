@@ -21,11 +21,12 @@
     isNormalUser = true;
     description = "${username}";
     extraGroups = ["networkmanager" "wheel" "dialout"];
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
   };
   nix.settings = {
     warn-dirty = false;
     allowed-users = ["${username}"];
     trusted-users = ["root" "${username}"];
   };
+  programs.zsh.enable = true;
 }
