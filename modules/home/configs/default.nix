@@ -20,7 +20,10 @@
     ./firefox
     ./music
     ./cura.nix
+    ./obs-studio.nix
   ];
+
+  # TODO: move this out of default.nix
 
   catppuccin = {
     flavor = "macchiato";
