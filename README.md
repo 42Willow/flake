@@ -38,9 +38,10 @@ Thank you to the following people for helping me get into nix (from [catppuccin]
 
 ### Configurations
 
-- [Frost-Phoenix/nixos-config](https://github.com/Frost-Phoenix/nixos-config) for the simple and clean config structure
-- [sioodmy/dotfiles](https://github.com/sioodmy/dotfiles)
 - [isabelroses/dotfiles](https://github.com/isabelroses/dotfiles)
+- [uncenter/flake](https://github.com/uncenter/flake)
+- [sioodmy/dotfiles](https://github.com/sioodmy/dotfiles)
+- [Frost-Phoenix/nixos-config](https://github.com/Frost-Phoenix/nixos-config)
 
 ... and more [here](https://github.com/stars/42Willow/lists/nix)
 
