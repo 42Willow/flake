@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ./../../modules/core
+    ./../../users
   ];
 
   nixpkgs.config.permittedInsecurePackages = [

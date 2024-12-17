@@ -6,5 +6,6 @@
       clean.extraArgs = "--keep-since 4d --keep 3";
     };
     steam.enable = true;
+    zsh.enable = true;
   };
 }

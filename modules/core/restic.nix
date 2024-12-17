@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   users.users.restic = {
+    # TODO: isSystemUser = true?
     isNormalUser = true;
   };
 
