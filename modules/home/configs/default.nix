@@ -21,6 +21,7 @@
     ./music
     ./cura.nix
     ./obs-studio.nix
+    ./yazi.nix
   ];
 
   # TODO: move this out of default.nix
