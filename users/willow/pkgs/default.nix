@@ -3,6 +3,12 @@
   inputs,
   ...
 }: {
+  imports = [
+    ./cli
+    ./gui
+    ./tui
+  ];
+
   home.packages = with inputs;
     [
       # TODO: whiskers
