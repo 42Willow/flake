@@ -19,8 +19,8 @@
 
   imports = [
     ./core
-    ./music
     ./pkgs
+    ./scripts
     ./services
     ./themes
   ];
