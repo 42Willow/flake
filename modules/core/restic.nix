@@ -1,20 +1,23 @@
 {pkgs, ...}: {
-  users.users.restic = {
-    # TODO: isSystemUser = true?
-    isNormalUser = true;
+  users = {
+    users.restic = {
+      isSystemUser = true;
+      group = "restic";
+    };
+    groups.restic = {};
   };
 
   security.wrappers.restic = {
     source = "${pkgs.restic.out}/bin/restic";
     owner = "restic";
-    group = "users";
+    group = "restic";
     permissions = "u=rwx,g=,o=";
     capabilities = "cap_dac_read_search=+ep";
   };
 
   services.restic.backups = {
     remotebackup = {
-      passwordFile = "/etc/nixos/secrets/restic-password";
+      passwordFile = "/home/willow/flake/secrets/restic";
       paths = [
         "/home/willow/docs"
         "/home/willow/git"
