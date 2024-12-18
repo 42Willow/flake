@@ -22,7 +22,7 @@ Hostnames are listed in this [gist](https://gist.github.com/42Willow/bd33bd408de
 1. Clone the repository
 
    ```bash
-   nix run nixpkgs#git clone https://github.com/42willow/flakes.git --extra-experimental-features "nix-command flakes"
+   nix run nixpkgs#git clone https://github.com/42willow/flake.git --extra-experimental-features "nix-command flakes"
    ```
 
 ## Credits
