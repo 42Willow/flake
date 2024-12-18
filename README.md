@@ -6,7 +6,7 @@
 These are my new dotfiles (migrating from arch over at https://github.com/42willow/dotfiles)
 
 > [!WARNING]
-> You should _not_ look at this for inspiration until it's complete.
+> You should _not_ look at this for inspiration until it's complete, actually, you should probably never look at this for inspiration.
 > If you are looking for inspiration, check out the [credits/configurations](#configurations) section, make sure to properly credit the original authors!
 
 ## Hosts
