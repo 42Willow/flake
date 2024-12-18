@@ -1,5 +1,4 @@
 # Adapted from https://github.com/isabelroses/dotfiles/blob/main/home/comfy/packages/cli/starship.nix under EUPL-1.2 license
-
 {
   lib,
   config,
