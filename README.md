@@ -7,6 +7,7 @@ These are my new dotfiles (migrating from arch over at https://github.com/42will
 
 > [!WARNING]
 > You should _not_ look at this for inspiration until it's complete.
+> If you are looking for inspiration, check out the [credits/configurations](#configurations) section, make sure to properly credit the original authors!
 
 ## Hosts
 
@@ -30,11 +31,11 @@ Hostnames are listed in this [gist](https://gist.github.com/42Willow/bd33bd408de
 
 Thank you to the following people for helping me get into nix (from [catppuccin](https://github.com/catppuccin/)):
 
-- [HPSaucii](https://github.com/HPsaucii) for helping me up the initial learning cliff
-- [Isabel](https://github.com/isabelroses) for also helping me climb the cliff
+- [HPSaucii](https://github.com/HPsaucii)
+- [Isabel](https://github.com/isabelroses)
 - [Getchoo](https://github.com/getchoo) for making [catppuccin/nix](https://github.com/catppuccin/nix)
 
-... and everyone else in the [catppuccin org](https://github.com/catppuccin)
+... and everyone else in the [catppuccin](https://github.com/catppuccin) nix community for their continued support :)
 
 ### Configurations
 
