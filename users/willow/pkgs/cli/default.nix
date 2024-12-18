@@ -2,6 +2,7 @@
   imports = [
     ./beets.nix
     ./bun.nix
+    ./fzf.nix
     ./git.nix
     ./nushell.nix
     ./ripgrep.nix
